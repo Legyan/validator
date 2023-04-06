@@ -203,6 +203,9 @@ func validateMax(v reflect.Value, param string) error {
 		if v.Len() > max {
 			return fmt.Errorf("length must not exceed %d", max)
 		}
+		if v.Len() < 1 {
+			return fmt.Errorf("value must be at least 1")
+		}
 	case reflect.Int:
 		if v.Int() > int64(max) {
 			return fmt.Errorf("value must not exceed %d", max)
