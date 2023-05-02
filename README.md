@@ -1,19 +1,18 @@
 # Validator
 
-`validator` is a simple package for validating structs in Go. It uses struct field tags to define validation rules and returns a list of validation errors when a struct does not meet the specified requirements.
+`validator` is a simple module for validating structs in Go. It uses struct field tags to define validation rules and returns a list of validation errors when a struct does not meet the specified requirements.
 
 ## Features
 
 - Validate struct fields using tags
 - Built-in validators: `len`, `in`, `min`, `max`
-- Supports `string` and `int` types
-- Supports validation of slices of `string` and `int`
+- Supports `string` and `int` types, slices of `string` and `int`
 - Customizable error messages
 
 ## Installation
 
 ```sh
-go get -u github.com/yourusername/validator
+go get -u github.com/legyan/validator
 ```
 
 ## Usage
@@ -23,7 +22,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yourusername/validator"
+	"github.com/legyan/validator"
 )
 
 type User struct {
